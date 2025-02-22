@@ -12,9 +12,9 @@ import { motion } from "motion/react"
 const Clients = () => {
     return (
         <motion.div 
-        initial={{opacity:0 , x:200}}
+        initial={{opacity:0 , y:250}}
         transition={{duration:1.2 }}
-        whileInView={{opacity:1, x:0}}
+        whileInView={{opacity:1, y:0}}
         viewport={{once:false}}
         className='ClientsBox'>
             <div className="clientText">
