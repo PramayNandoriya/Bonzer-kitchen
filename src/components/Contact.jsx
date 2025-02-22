@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import "../style/Contact.css"
 import { key } from '../key';
 import { toast } from "react-toastify";
+import { motion } from "motion/react";
+
 
 const Contact = () => {
 
@@ -43,7 +45,12 @@ const Contact = () => {
     }
   };
     return (
-        <div className='contactBox' id='contactUs'>
+        <motion.div
+        initial={{ opacity: 0 }}
+        transition={{ duration: 3 }}
+        whileInView={{ opacity: 1, }}
+        viewport={{ once: false }}
+        className='contactBox' id='contactUs'>
             <div className="clientText">
                 <h1 className='FirstText'>Contact</h1> <h1 className='secondText'>Us</h1>
             </div>
@@ -92,7 +99,7 @@ const Contact = () => {
             </div>
 
 
-        </div>
+        </motion.div>
     );
 }
 

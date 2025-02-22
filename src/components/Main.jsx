@@ -11,9 +11,9 @@ const Main = () => {
     return (     
 
         <motion.div 
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        transition={{ duration: 1.5, ease: "easeIn" }}
         viewport={{once:false}}
         
         className='wrapper' id='home'>

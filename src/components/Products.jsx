@@ -12,7 +12,7 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { motion } from "motion/react";
 
-console.log(inductionProducts);
+// console.log(inductionProducts);
 
 const Products = () => {
     const [value, setValue] = useState('1');
@@ -46,12 +46,7 @@ const Products = () => {
     };
 
     return (
-        <motion.div
-            initial={{ opacity: 0, x: -200 }}
-            transition={{ duration: 1.2 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
-            className='ProductBox' id='products'>
+        <div className='ProductBox' id='products'>
             <div className="clientText">
                 <h1 className='FirstText'>It's Bronzer's</h1> <h1 className='secondText'>Products</h1>
             </div>
@@ -69,17 +64,27 @@ const Products = () => {
                         <TabPanel className='prodcutsConatiners' value="1">
                             {Array.isArray(currentProducts) && currentProducts.length > 0 ? (
                                 currentProducts.map((items, index) => (
-                                    <div className='proWrapper' key={index}>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -300 }}
+                                        transition={{ duration: 1.2 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: false }}
+                                        className='proWrapper' key={index}>
                                         <img className='proImg' src={items.img} alt={items.name} />
-                                        <div className='proDetails'>
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 0 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 3, ease: "easeIn" }}
+                                            viewport={{ once: false }}
+                                            className='proDetails'>
                                             <h1 className='proName'>{items.name}</h1>
                                             <ul>
                                                 {items.features.map((feature, i) => (
                                                     <li key={i}>{feature}</li>
                                                 ))}
                                             </ul>
-                                        </div>
-                                    </div>
+                                        </motion.div>
+                                    </motion.div>
                                 ))
                             ) : (
                                 <p>No products available</p> // Handle empty state
@@ -101,7 +106,7 @@ const Products = () => {
                                         <img className='proImg' src={items.img} alt={items.name} />
                                         <div className='proDetails'>
                                             <h1 className='proName'>{items.name}</h1>
-                                            <p style={{color:"#1976d2", fontSize:"1.5rem",fontWeight:"600"}}>{items.p}</p>
+                                            <p style={{ color: "#1976d2", fontSize: "1.5rem", fontWeight: "600" }}>{items.p}</p>
                                             {items.features && (
                                                 <ul>
                                                     {items.features.map((feature, i) => (
@@ -127,7 +132,7 @@ const Products = () => {
                     </Box>
                 </TabContext>
             </Box>
-        </motion.div>
+        </div>
     );
 };
 
