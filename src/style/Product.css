@@ -1,0 +1,80 @@
+.ProductBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+}
+
+
+.clientText {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    gap: 10px;
+}
+
+.FirstText {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+
+.secondText {
+    color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    border-bottom: 2px solid gray;
+}
+
+
+.productTab{
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.prodcutsConatiners{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 32px;
+}
+
+.proWrapper{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 40vw;
+    padding: 25px;
+    margin-top: 8vh;
+    height: auto;
+    /* overflow-y: scroll; */
+}
+
+.proImg{
+    width: 45%;
+}
+
+.proDetails{
+
+}
+
+.proName{
+    font-weight: 700;
+    color: #1976d2;
+    font-family: monospace;
+    font-size: 2.5rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .proWrapper{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+ }
+ 

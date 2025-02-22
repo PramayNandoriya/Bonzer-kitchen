@@ -1,0 +1,96 @@
+.header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #0c0f14;
+}
+
+
+.logoImg {
+    width: 15%;
+}
+
+.li {
+    display: flex;
+    justify-content: end;
+    width: 84%;
+}
+
+.li > a {
+    text-decoration: none;
+    color: gray !important;
+    padding: 25px;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.mobileLi > a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.menuIcon img {
+    width: 40px; /* Adjust the size of the hamburger or close icon */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for icon change */
+    margin-right: 25px;
+    background : none;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .li {
+        display: none; /* Hide desktop menu in mobile */
+    }
+
+    .logoImg {
+        width: 40%; /* Adjust logo size for mobile */
+    }
+
+    .mobileMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .mobileLi {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px; /* Adjust based on the logo size */
+        right: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobileLi > a {
+        text-decoration: none;
+        color: black;
+        padding: 25px;
+        font-size: 1.2em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 2px;
+    }
+}
