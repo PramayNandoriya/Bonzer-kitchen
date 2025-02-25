@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     background-color: #0c0f14;
-    padding-top: 15vh;
+    padding: 15vh 0 10vh 0;
 }
 
 .clientText {
@@ -47,6 +47,8 @@
 .ownerInfoBox {
     display: flex;
     flex-direction: column;
+    border-right: 1px solid gray;
+    padding-right: 5vw;
 }
 
 .ownerInfoBox>h1 {
@@ -64,16 +66,49 @@
     overflow: hidden;
 }
 
+.bronzerDetails {
+    color: gray;
+    font-size: 1.2rem;
+    padding-left: 2vw
+}
+
+.chart {
+    /* background-color: antiquewhite; */
+    padding-right: 5vw;
+    height: 45vh;
+    width: 50vw !important;
+}
+
+.lineChartHeading {
+    color: #1976d2;
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 8vh;
+}
 
 @media only screen and (max-width: 768px) {
     .ownerComImg {
         width: 80%;
         border-radius: 10px;
     }
-    .ownerInfo{
+
+    .ownerInfo {
         flex-direction: column;
-        align-items: center ;
+        align-items: center;
     }
- }
- 
- 
+
+    .ownerInfoBox {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .chart {
+        width: 100vw !important;
+        padding-right: 10vw;
+    }
+    .lineChartHeading {
+        font-size: 1.5rem;
+        width: 80%;
+    }
+}

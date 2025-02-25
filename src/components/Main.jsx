@@ -7,16 +7,16 @@ import { motion } from "motion/react"
 
 const Main = () => {
 
-    
-    return (     
 
-        <motion.div 
-        initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, ease: "easeIn" }}
-        viewport={{once:false}}
-        
-        className='wrapper' id='home'>
+    return (
+
+        <motion.div
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, ease: "easeIn" }}
+            viewport={{ once: false }}
+
+            className='wrapper' id='home'>
             <img className='mainImg' src={main} />
             <div className='introBox'>
                 <TypeAnimation
@@ -26,15 +26,15 @@ const Main = () => {
                     ]}
                     wrapper="span"
                     speed={50}
-                    repeat={{Infinity}}
-                    />
+                    repeat={{ Infinity }}
+                />
             </div>
-            
+
         </motion.div>
-        
 
 
-                   
+
+
     );
 }
 

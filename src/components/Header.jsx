@@ -25,7 +25,7 @@ const Header = () => {
 
     return (
         <div className='header'>
-            <img className="logoImg" src={logo} alt='logo' />
+            <img className="logoImg" src={logo} alt='logo' onClick={()=>{window.location.hash="#home"}}/>
 
             {/* Desktop menu */}
             <div className="li">

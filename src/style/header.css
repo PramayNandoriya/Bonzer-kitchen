@@ -10,11 +10,13 @@
     justify-content: space-between;
     padding: 0 20px;
     background-color: #0c0f14;
+
 }
 
 
 .logoImg {
     width: 15%;
+    cursor: pointer;
 }
 
 .li {
@@ -32,7 +34,9 @@
     letter-spacing: 2px;
     cursor: pointer;
 }
-
+.li a:hover {
+    color: white !important; /* Change the color on hover */
+}
 .mobileLi > a {
     text-decoration: none;
     display: block;
