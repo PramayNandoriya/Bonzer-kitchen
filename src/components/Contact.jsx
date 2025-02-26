@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import "../style/Contact.css"
-import { key } from '../key';
 import { toast } from "react-toastify";
 import { motion } from "motion/react";
+import { key } from '../key';
 
 
 const Contact = () => {
-
+ 
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -21,7 +21,11 @@ const Contact = () => {
     //email message
     const [result, setResult] = React.useState("");
     const onSubmit = async (event) => {
+       
         event.preventDefault();
+        // const key = "f30f4de8-4ca8-44dd-8b98-f42889d3efcd"
+        // const key=process.env.REACT_APP_API;
+        // console.log(key)
         setResult("Sending....");
         const formData = new FormData(event.target);
     
