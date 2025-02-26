@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import "../style/Contact.css"
 import { toast } from "react-toastify";
 import { motion } from "motion/react";
-import { key } from '../key';
 
 
-const Contact = () => {
+
+const Contact = ({contact_key}) => {
  
     const [formData, setFormData] = useState({
         name: "",
@@ -23,13 +23,12 @@ const Contact = () => {
     const onSubmit = async (event) => {
        
         event.preventDefault();
-        // const key = "f30f4de8-4ca8-44dd-8b98-f42889d3efcd"
-        // const key=process.env.REACT_APP_API;
-        // console.log(key)
+     
+        console.log(contact_key)
         setResult("Sending....");
         const formData = new FormData(event.target);
     
-        formData.append("access_key", key);
+        formData.append("access_key", contact_key);
     
         const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",

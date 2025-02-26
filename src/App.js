@@ -11,6 +11,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 
 const App = () => {
+  const key=process.env.REACT_APP_KEY
   return (
     <div>
           <Router>
@@ -22,7 +23,7 @@ const App = () => {
       <About/>
       {/* <Reviews/> */}
       <Location/>
-      <Contact/>
+      <Contact contact_key={key}/>
       <ToastContainer/>
       </Router>
 
