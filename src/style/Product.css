@@ -1,4 +1,4 @@
-.ProductBox{
+.ProductBox {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,51 +28,60 @@
 }
 
 
-.productTab{
+.productTab {
     display: flex;
     justify-content: center;
     margin-top: 8vh;
 }
 
-.prodcutsConatiners{
+.prodcutsConatiners {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
+    /* height: 35vh; */
     justify-content: center;
     gap: 32px;
 }
 
-.proWrapper{
+.proWrapper {
     display: flex;
-    /* justify-content: center; */
+    flex-direction: column;
     align-items: center;
     gap: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 40vw;
+    width: 30vw;
     padding: 25px;
     margin-top: 8vh;
-    height: auto;
-    /* overflow-y: scroll; */
+    /* height: 50vh; */
 }
 
-.proImg{
-    width: 45%;
+.proImg {
+    width: 65%;
 }
 
-.proName{
+.proName {
     font-weight: 700;
     color: #1976d2;
     font-family: monospace;
     font-size: 2.5rem;
+    text-align: center;
 }
 
 
 @media only screen and (max-width: 768px) {
-    .proWrapper{
+    .proWrapper {
         width: 100%;
         height: auto;
-        flex-direction: column;
     }
- }
- 
+
+    .proImg {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+    .proImg {
+        width: 85%;
+    }
+}

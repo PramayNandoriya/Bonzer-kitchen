@@ -15,9 +15,9 @@ import { motion } from "motion/react";
 // console.log(inductionProducts);
 
 const Products = () => {
-    const [value, setValue] = useState('1');
+    const [value, setValue] = useState("1");
     const [page, setPage] = useState(1);
-    const productsPerPage = 4; // Show only 4 products per page
+    const productsPerPage = 6;
 
     // Calculate start and end index for pagination
     const indexOfLastProduct = page * productsPerPage;
@@ -89,15 +89,18 @@ const Products = () => {
                             ) : (
                                 <p>No products available</p> // Handle empty state
                             )}
-                            <Stack spacing={2} alignItems="center" sx={{ marginTop: 2 }}>
-                                <Pagination
-                                    count={Math.ceil(productData.length / productsPerPage)}
-                                    page={page}
-                                    onChange={handleChangePage}
-                                    color="primary"
-                                />
-                            </Stack>
+
                         </TabPanel>
+                        {value == "1" ? <Stack spacing={2} alignItems="center" sx={{ marginTop: 2, marginBottom: 5  }}>
+                            <Pagination
+                                count={Math.ceil(productData.length / productsPerPage)}
+                                page={page}
+                                onChange={handleChangePage}
+                                color="primary"
+                            />
+                        </Stack> : ""}
+
+
 
                         <TabPanel className='prodcutsConatiners' value="2">
                             {Array.isArray(currentInductionProducts) && currentInductionProducts.length > 0 ? (
@@ -120,15 +123,19 @@ const Products = () => {
                             ) : (
                                 <p>No induction products available</p> // Handle empty state
                             )}
-                            <Stack spacing={2} alignItems="center" sx={{ marginTop: 2 }}>
-                                <Pagination
-                                    count={Math.ceil(inductionProducts.length / inductionProductsPerPage)}
-                                    page={inductionPage}
-                                    onChange={handleInductionChangePage}
-                                    color="primary"
-                                />
-                            </Stack>
+
                         </TabPanel>
+                       
+                       {
+                        value == "2" ? <Stack spacing={2} alignItems="center" sx={{ marginTop: 2, marginBottom: 5 }}>
+                            <Pagination
+                                count={Math.ceil(inductionProducts.length / inductionProductsPerPage)}
+                                page={inductionPage}
+                                onChange={handleInductionChangePage}
+                                color="primary"
+                            />
+                        </Stack> : " "
+                       } 
                     </Box>
                 </TabContext>
             </Box>
